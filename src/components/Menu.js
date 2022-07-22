@@ -1,5 +1,7 @@
+import './Menu.scss';
+
 const Menu = () => (
-    <div>
+    <div className="background">
         <p>Test</p>
     </div>
 );
