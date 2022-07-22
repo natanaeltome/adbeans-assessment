@@ -7,6 +7,18 @@
     box-sizing: border-box;
 }
 
+a {
+
+    &:visited {
+        color: $menu-font-color;
+    }
+
+    &:hover {
+        color: $menu-font-color;
+    }
+
+}
+
 h1,
 h2,
 h3,

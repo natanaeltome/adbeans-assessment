@@ -8,11 +8,11 @@ const Menu = () => (
                 <img src="" alt="BGG Collection Finder logo"></img>
             </a>
             <ul className='nav-links'>
-                <li className='link'>
-                    <Link to="/">List</Link>
+                <li >
+                    <Link className='link' to="/">List</Link>
                 </li>
                 <li className='link'>
-                    <Link to="/about">About</Link>
+                    <Link className='link' to="/about">About</Link>
                 </li>
             </ul>
         </nav>
