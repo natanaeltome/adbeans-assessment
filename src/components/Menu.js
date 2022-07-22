@@ -1,4 +1,5 @@
 import './Menu.scss';
+import { Link } from "react-router-dom";
 
 const Menu = () => (
     <header className="background">
@@ -7,8 +8,12 @@ const Menu = () => (
                 <img src="" alt="BGG Collection Finder logo"></img>
             </a>
             <ul className='nav-links'>
-                <li className='link'>List</li>
-                <li className='link'>About</li>
+                <li className='link'>
+                    <Link to="/">List</Link>
+                </li>
+                <li className='link'>
+                    <Link to="/">About</Link>
+                </li>
             </ul>
         </nav>
     </header>
