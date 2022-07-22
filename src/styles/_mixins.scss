@@ -1,0 +1,53 @@
+// Media Query variables
+$breakpoint-sm: 375px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1440px;
+
+// Mixins
+
+@mixin breakpoint($point) {
+    @if $point==xsm {
+        @media (max-width: $breakpoint-xsm) {
+            @content;
+        }
+    }
+
+    @else if $point==sm {
+        @media (max-width: $breakpoint-sm) {
+            @content;
+        }
+    }
+
+    @else if $point==md {
+        @media (max-width: $breakpoint-md) {
+            @content;
+        }
+    }
+
+    @else if $point==lg {
+        @media (max-width: $breakpoint-lg) {
+            @content;
+        }
+    }
+
+    @else if $point==xl {
+        @media (max-width: $breakpoint-xl) {
+            @content;
+        }
+    }
+
+    @else if $point==xxl {
+        @media (max-width: $breakpoint-xxl) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (max-width: '#{$point}') {
+            @content
+        }
+    }
+}
