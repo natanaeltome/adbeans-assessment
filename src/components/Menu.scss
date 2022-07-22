@@ -3,3 +3,27 @@
 .background {
     background-color: $menu-bg-color;
 }
+
+.logo {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.nav-links {
+    display: flex;
+    margin-left: 100px;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $menu-font-color;
+}
+
+.link {
+    margin-left: 20px;
+}
