@@ -1,0 +1,24 @@
+@import '../styles/_colors.scss';
+@import '../styles/_mixins.scss';
+
+.nav-links {
+    display: none;
+    list-style: none;
+    font-weight: 400;
+    color: $menu-font-color;
+    text-decoration: none;
+
+    @include breakpoint(md) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.link {
+    text-decoration: none;
+
+    @include breakpoint(md) {
+        margin-left: 60px;
+    }
+
+}

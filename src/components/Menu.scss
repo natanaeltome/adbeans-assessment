@@ -5,27 +5,20 @@
     background-color: $menu-bg-color;
 }
 
+.navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 1.5rem;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
 .logo {
     font-weight: 700;
     font-size: 2rem;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-}
-
-.nav-links {
-    display: flex;
-    margin-left: 100px;
-    list-style: none;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: $menu-font-color;
-}
-
-.link {
-    margin-left: 30px;
-    text-decoration: none;
 }
