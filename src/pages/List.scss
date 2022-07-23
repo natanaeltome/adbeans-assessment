@@ -1,0 +1,29 @@
+@import '../styles/_colors.scss';
+@import '../styles/_mixins.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin: 30px;
+    height: 80vh;
+    background-color: $secondary-bg-color;
+    border-radius: 20px;
+    color: $main-text-color;
+
+    @include breakpoint(sm) {
+        align-items: flex-start;
+    }
+}
+
+.list-title--h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.list-title--h2 {
+    font-size: 1.5rem;
+    padding-top: 20px;
+    text-align: center;
+}
