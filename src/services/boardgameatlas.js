@@ -4,7 +4,7 @@ const URL = `https://api.boardgameatlas.com/api/search?list_id=mGkyiPhujf&client
 const getAll = () => {
     return axios
         .get(URL)
-        .then(response => response.data);
+        .then(response => response.data.games);
 };
 
 export default { getAll };

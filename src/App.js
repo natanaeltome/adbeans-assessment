@@ -12,7 +12,17 @@ const App = () => {
   useEffect(() => {
     apiServices.getAll()
       .then(bgCollection => {
-        setCollection(bgCollection);
+        setCollection(bgCollection.map(boardgame => {
+          return {
+            name: boardgame.name,
+            players: boardgame.players,
+            rating: boardgame.average_user_rating,
+            rank: boardgame.rank,
+            price: boardgame.price
+          };
+
+        }
+        ));
       });
   }, []);
 
@@ -20,7 +30,7 @@ const App = () => {
     <>
       <Menu />
       <Routes>
-        <Route path='/' element={<List data={collection} />} />
+        <Route path='/' element={<List rowData={collection} />} />
         <Route path='/about' element={<About />} />
       </Routes>
     </>
