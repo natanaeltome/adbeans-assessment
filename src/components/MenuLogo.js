@@ -2,7 +2,7 @@ import './MenuLogo.scss';
 
 const MenuLogo = () => (
     <a href='/' className='logo'>
-        <img src="" alt="BGG Collection Finder logo"></img>
+        <img src={require('../images/logo.png')} alt="BGG Collection Finder"></img>
     </a>
 );
 

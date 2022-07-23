@@ -5,7 +5,7 @@
     position: absolute;
     font-size: 2rem;
 
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
         display: none;
     }
 }

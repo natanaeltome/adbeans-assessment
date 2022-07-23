@@ -4,13 +4,8 @@
 .nav-links {
     display: none;
 
-    @include breakpoint(md) {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        font-weight: 400;
-        color: $menu-font-color;
-        text-decoration: none;
+    @include breakpoint(sm) {
+        @include menu-row();
     }
 }
 
@@ -21,13 +16,11 @@
     height: 50vh;
     padding-top: 16px;
     list-style: none;
-    font-weight: 400;
     color: $menu-font-color;
     text-decoration: none;
 
-    @include breakpoint(md) {
-        display: flex;
-        flex-direction: row;
+    @include breakpoint(sm) {
+        @include menu-row();
         padding-top: 0;
         height: auto;
     }
@@ -35,8 +28,9 @@
 
 .link {
     display: block;
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
     padding-bottom: 16px;
     width: 100vw;
 
@@ -44,11 +38,10 @@
         background-color: $button-color;
     }
 
-    @include breakpoint(md) {
-        display: inline;
+    @include breakpoint(sm) {
         width: auto;
-        padding: 0 0 0 60px;
-        text-align: left;
+        margin-left: 60px;
+        padding-bottom: 0;
 
         &:hover {
             background-color: transparent;

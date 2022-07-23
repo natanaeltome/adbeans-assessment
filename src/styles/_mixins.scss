@@ -8,6 +8,15 @@ $breakpoint-xxl: 1440px;
 
 // Mixins
 
+@mixin menu-row() {
+    display: flex;
+    flex-direction: row;
+    margin-left: 32px;
+    list-style: none;
+    color: $menu-font-color;
+    text-decoration: none;
+}
+
 @mixin breakpoint($point) {
     @if $point==xsm {
         @media (min-width: $breakpoint-xsm) {
