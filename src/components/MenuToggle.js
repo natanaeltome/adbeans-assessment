@@ -3,7 +3,7 @@ import './MenuToggle.scss';
 const MenuToggle = ({ onClick }) =>
 (
     <>
-        <a className='toggle' href="#" tabIndex="0" onClick={onClick} ><i className="fas fa-bars"></i></a>
+        <a className='toggle' href="#" tabIndex="0" onClick={onClick} ><i className="fa-solid fa-bars"></i></a>
     </>
 );
 

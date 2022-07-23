@@ -4,18 +4,54 @@
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 30px;
     margin: 30px;
     height: 80vh;
     background-color: $secondary-bg-color;
     border-radius: 20px;
     color: $main-text-color;
+
+    @include breakpoint(sm) {
+        align-items: flex-start;
+    }
 }
 
-.about-title {
+.about-title--h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about-title--h2 {
     font-size: 1.5rem;
+    padding-top: 20px;
+    text-align: center;
 }
 
 .about-text {
-    padding-top: 30px;
+    padding-top: 15px;
+}
+
+.about-list {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.about-resume {
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: $button-color;
+
+}
+
+.about-resume__icon {
+    padding-right: 10px;
+    color: $main-text-color;
+}
+
+.about-resume__text {
+    color: $main-text-color;
 }
