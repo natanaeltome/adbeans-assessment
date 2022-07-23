@@ -23,7 +23,6 @@ const App = () => {
         <Route path='/' element={<List data={collection} />} />
         <Route path='/about' element={<About />} />
       </Routes>
-      <p>Hello world</p>
     </>
   );
 };

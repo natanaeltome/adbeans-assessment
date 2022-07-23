@@ -1,9 +1,9 @@
 import axios from 'axios';
-const baseURL = 'https://api.boardgameatlas.com/api/search?list_id=mGkyiPhujf&client_id=LyaEENTwYO';
+const URL = `https://api.boardgameatlas.com/api/search?list_id=mGkyiPhujf&client_id=${process.env.REACT_APP_CLIENT_ID}`;
 
 const getAll = () => {
     return axios
-        .get(baseURL)
+        .get(URL)
         .then(response => response.data);
 };
 
