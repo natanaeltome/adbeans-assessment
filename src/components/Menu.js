@@ -9,12 +9,16 @@ const Menu = () => {
 
     const [toggleOpen, setToggleOpen] = useState(false);
 
+    const handleToggle = () => {
+        setToggleOpen(prev => !prev);
+    };
+
     return (
         <header className="background">
             <nav className='navbar'>
                 <MenuLogo />
-                <MenuLinks />
-                <MenuToggle onClick={toggleOpen} />
+                <MenuLinks toggleOpen={toggleOpen} />
+                <MenuToggle onClick={handleToggle} />
             </nav>
         </header>
     );

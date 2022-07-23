@@ -3,6 +3,23 @@
 
 .nav-links {
     display: none;
+
+    @include breakpoint(md) {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        font-weight: 400;
+        color: $menu-font-color;
+        text-decoration: none;
+    }
+}
+
+.nav-links--expanded {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    padding-top: 16px;
     list-style: none;
     font-weight: 400;
     color: $menu-font-color;
@@ -11,14 +28,31 @@
     @include breakpoint(md) {
         display: flex;
         flex-direction: row;
+        padding-top: 0;
+        height: auto;
     }
 }
 
 .link {
+    display: block;
     text-decoration: none;
+    text-align: center;
+    padding-bottom: 16px;
+    width: 100vw;
+
+    &:hover {
+        background-color: $button-color;
+    }
 
     @include breakpoint(md) {
-        margin-left: 60px;
+        display: inline;
+        width: auto;
+        padding: 0 0 0 60px;
+        text-align: left;
+
+        &:hover {
+            background-color: transparent;
+        }
     }
 
 }
