@@ -8,7 +8,7 @@ export const useFetchCollection = () => {
         return {
             name: boardgame.name,
             players: boardgame.players,
-            rating: boardgame.average_user_rating,
+            rating: boardgame.average_user_rating.toFixed(2),
             rank: boardgame.rank,
             price: boardgame.price
         };

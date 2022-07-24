@@ -15,9 +15,9 @@ const Table = ({ rowData }) => {
     const columnDefs = [
         { field: 'name' },
         { field: 'players' },
-        { field: 'rating' },
+        { field: 'rating', headerName: 'User Rating (1-5)' },
         { field: 'rank' },
-        { field: 'price' },
+        { field: 'price', headerName: 'Price (USD)' },
     ];
 
     const onGridSizeChanged = (params, windowWidth) => {
