@@ -1,25 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useWindowSize } from "../hooks/useWindowSize";
 import { AgGridReact } from 'ag-grid-react';
 import './Table.scss';
 
 const Table = ({ rowData }) => {
-    const [windowSize, setWindowSize] = useState(getWindowSize());
-    useEffect(() => {
-        function handleWindowResize() {
-            setWindowSize(getWindowSize());
-        }
 
-        window.addEventListener('resize', handleWindowResize);
-
-        return () => {
-            window.removeEventListener('resize', handleWindowResize);
-        };
-    }, []);
-
-    function getWindowSize() {
-        const { innerWidth, innerHeight } = window;
-        return { innerWidth, innerHeight };
-    }
+    const windowSize = useWindowSize();
 
     const defaultColDef = {
         resizable: true,
@@ -36,7 +21,7 @@ const Table = ({ rowData }) => {
     ];
 
     const onGridSizeChanged = (params, windowWidth) => {
-        if (windowWidth > 880) {
+        if (windowWidth.innerWidth > 880) {
             return params.sizeColumnsToFit();
         }
     };
@@ -44,12 +29,12 @@ const Table = ({ rowData }) => {
     return (
         <div className='container-table'>
             <AgGridReact className="ag-theme-custom"
-                rowData={rowData} // Row Data for Rows
-                columnDefs={columnDefs} // Column Defs for Columns
-                animateRows={true} // Optional - set to 'true' to have rows animate when sorted
+                rowData={rowData}
+                columnDefs={columnDefs}
+                animateRows={true}
                 defaultColDef={defaultColDef}
                 onFirstDataRendered={params => params.api.sizeColumnsToFit()}
-                onGridSizeChanged={params => onGridSizeChanged(params.api, windowSize.innerWidth)}
+                onGridSizeChanged={params => onGridSizeChanged(params.api, windowSize)}
             />
         </div>
     );
