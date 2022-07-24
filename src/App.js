@@ -1,30 +1,12 @@
-import { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
+import { useFetchCollection } from "./hooks/useFetchCollection";
 import Menu from './components/Menu';
-import About from './pages/About';
 import List from './pages/List';
-import apiServices from './services/boardgameatlas';
+import About from './pages/About';
 
 const App = () => {
 
-  const [collection, setCollection] = useState([]);
-
-  useEffect(() => {
-    apiServices.getAll()
-      .then(bgCollection => {
-        setCollection(bgCollection.map(boardgame => {
-          return {
-            name: boardgame.name,
-            players: boardgame.players,
-            rating: boardgame.average_user_rating,
-            rank: boardgame.rank,
-            price: boardgame.price
-          };
-
-        }
-        ));
-      });
-  }, []);
+  const collection = useFetchCollection();
 
   return (
     <>
