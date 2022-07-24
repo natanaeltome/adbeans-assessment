@@ -8,8 +8,8 @@
     padding: 30px;
     margin: 30px;
     height: 80vh;
-    background-color: $secondary-bg-color;
     border-radius: 20px;
+    background-color: $secondary-bg-color;
     color: $main-text-color;
 
     @include breakpoint(sm) {
@@ -34,25 +34,5 @@
 }
 
 .about-list {
-    padding-top: 15px;
-    padding-left: 15px;
-}
-
-.about-resume {
-    font-size: 1.2rem;
-    text-decoration: none;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 10px;
-    background-color: $button-color;
-
-}
-
-.about-resume__icon {
-    padding-right: 10px;
-    color: $main-text-color;
-}
-
-.about-resume__text {
-    color: $main-text-color;
+    padding: 15px 0 0 15px;
 }
