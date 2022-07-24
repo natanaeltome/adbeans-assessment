@@ -3,10 +3,10 @@ import './About.scss';
 
 const About = () => (
     <div className="container-about">
-        <h1 className='about-title--h1'>BoardGameGeek Collection Finder</h1>
+        <h1 className='about-title--h1'>BoardGameAtlas Collection Finder</h1>
 
         <h2 className='about-title--h2'>Overview</h2>
-        <p className='about-text'>BoardGameGeek Collection Finder is a simple Single Page Application (SPA) that fetches data from the <a href='https://boardgamegeek.com/wiki/page/BGG_XML_API2#toc0' target="_blank" rel="noreferrer">BoardGameGeek API</a> to display a user collection.</p>
+        <p className='about-text'>BoardGameAtlas Collection Finder is a simple Single Page Application (SPA) that fetches data from the <a href='https://www.boardgameatlas.com/api/docs' target="_blank" rel="noreferrer">BoardGameAtlas API</a> to display a user collection.</p>
 
         <h2 className='about-title--h2'>Highlights</h2>
         <ul className='about-list'>

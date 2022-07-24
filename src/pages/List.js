@@ -1,7 +1,6 @@
 import Table from '../components/Table';
 import './List.scss';
 
-
 const List = ({ rowData }) =>
 (
     <div className="container-list">
