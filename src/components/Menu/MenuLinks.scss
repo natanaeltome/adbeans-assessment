@@ -1,5 +1,5 @@
-@import '../styles/_colors.scss';
-@import '../styles/_mixins.scss';
+@import '../../styles/_colors.scss';
+@import '../../styles/_mixins.scss';
 
 .nav-links {
     display: none;
@@ -15,8 +15,8 @@
     align-items: center;
     height: 50vh;
     padding-top: 32px;
-    list-style: none;
     color: $menu-font-color;
+    list-style: none;
     text-decoration: none;
 
     @include breakpoint(sm) {
@@ -28,12 +28,11 @@
 
 .link {
     display: block;
+    width: 100vw;
+    padding: 16px 0 16px 0;
+    font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
-    font-size: 1.5rem;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    width: 100vw;
 
     &:hover {
         background-color: $button-color;

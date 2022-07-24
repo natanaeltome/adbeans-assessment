@@ -1,5 +1,5 @@
-import './MenuLinks.scss';
 import { Link } from "react-router-dom";
+import './MenuLinks.scss';
 
 const MenuLinks = ({ toggleOpen }) => {
 

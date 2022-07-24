@@ -1,14 +1,13 @@
 import { useState } from 'react';
-import './Menu.scss';
 import MenuLogo from './MenuLogo';
 import MenuLinks from './MenuLinks';
 import MenuToggle from './MenuToggle';
+import './Menu.scss';
 
 
 const Menu = () => {
 
     const [toggleOpen, setToggleOpen] = useState(false);
-
     const handleToggle = () => {
         setToggleOpen(prev => !prev);
     };

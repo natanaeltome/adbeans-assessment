@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { useFetchCollection } from "./hooks/useFetchCollection";
-import Menu from './components/Menu';
+import Menu from './components/Menu/Menu';
 import List from './pages/List';
 import About from './pages/About';
 
