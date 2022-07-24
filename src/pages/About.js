@@ -1,7 +1,7 @@
 import './About.scss';
 
 const About = () => (
-    <div className="container">
+    <div className="container-about">
         <h1 className='about-title--h1'>BoardGameGeek Collection Finder</h1>
 
         <h2 className='about-title--h2'>Overview</h2>

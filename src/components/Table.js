@@ -1,24 +1,55 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import './Table.scss';
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-material.css';
 
 const Table = ({ rowData }) => {
+    const [windowSize, setWindowSize] = useState(getWindowSize());
+    useEffect(() => {
+        function handleWindowResize() {
+            setWindowSize(getWindowSize());
+        }
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []);
+
+    function getWindowSize() {
+        const { innerWidth, innerHeight } = window;
+        return { innerWidth, innerHeight };
+    }
+
+    const defaultColDef = {
+        resizable: true,
+        sortable: true,
+        filter: true,
+    };
+
     const columnDefs = [
-        { field: 'name', sortable: true, filter: true },
-        { field: 'players', sortable: true, filter: true },
-        { field: 'rating', sortable: true, filter: true },
-        { field: 'rank', sortable: true, filter: true },
-        { field: 'price', sortable: true, filter: true },
+        { field: 'name' },
+        { field: 'players' },
+        { field: 'rating' },
+        { field: 'rank' },
+        { field: 'price' },
     ];
 
+    const onGridSizeChanged = (params, windowWidth) => {
+        if (windowWidth > 880) {
+            return params.sizeColumnsToFit();
+        }
+    };
+
     return (
-        <div style={{ height: '100%', width: '100%', color: "#fff", 'paddingTop': '30px' }}>
-            <AgGridReact className="ag-theme-material"
+        <div className='container-table'>
+            <AgGridReact className="ag-theme-custom"
                 rowData={rowData} // Row Data for Rows
                 columnDefs={columnDefs} // Column Defs for Columns
                 animateRows={true} // Optional - set to 'true' to have rows animate when sorted
+                defaultColDef={defaultColDef}
+                onFirstDataRendered={params => params.api.sizeColumnsToFit()}
+                onGridSizeChanged={params => onGridSizeChanged(params.api, windowSize.innerWidth)}
             />
         </div>
     );

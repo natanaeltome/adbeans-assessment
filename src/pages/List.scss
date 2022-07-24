@@ -1,9 +1,7 @@
 @import '../styles/_colors.scss';
 @import '../styles/_mixins.scss';
 
-
-
-.container {
+.container-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,24 +12,13 @@
     border-radius: 20px;
     color: $main-text-color;
 
-    @include breakpoint(sm) {
-        align-items: flex-start;
-    }
 }
 
 .list-title--h1 {
     font-size: 2rem;
     text-align: center;
-}
 
-.list-title--h2 {
-    font-size: 1.5rem;
-    padding-top: 20px;
-    text-align: center;
-}
-
-.table-container {
-    height: 500;
-    width: 800;
-    color: white;
+    @include breakpoint(sm) {
+        align-self: flex-start;
+    }
 }

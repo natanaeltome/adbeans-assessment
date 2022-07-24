@@ -1,2 +1,35 @@
-// @use '../../node_modules/ag-grid-community/styles'as ag;
-// @include ag.grid-styles(theme: material);
+@import "../../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../../node_modules/ag-grid-community/src/styles/ag-theme-material/sass/ag-theme-material-mixin";
+@import '../styles/_colors.scss';
+
+.ag-theme-custom {
+    @include ag-theme-material((foreground-color: $main-text-color,
+            background-color: $secondary-bg-color,
+            data-color:$main-text-color,
+            header-background-color: $secondary-bg-color,
+            odd-row-background-color:$secondary-table-color,
+            row-hover-color: $hover-table-color,
+            border-radius: 5px,
+            border-color: $border-table-color,
+            row-border-color: null,
+            font-family: ("Roboto", sans-serif),
+            font-size: 16px,
+            // justify-content:center,
+        ));
+}
+
+.container-table {
+    width: 99%;
+    height: 100%;
+    padding-top: 30px;
+}
+
+.ag-row .ag-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ag-header-cell-label {
+    justify-content: center;
+}
