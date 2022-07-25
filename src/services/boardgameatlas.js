@@ -6,4 +6,8 @@ const getAll = async () => {
     return response.data;
 };
 
-export default { getAll };
+const apiServices = {
+    getAll,
+};
+
+export default apiServices;
