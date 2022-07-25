@@ -16,7 +16,7 @@ const Menu = () => {
         <header className="background">
             <nav className='navbar'>
                 <MenuLogo />
-                <MenuLinks toggleOpen={toggleOpen} />
+                <MenuLinks toggleOpen={toggleOpen} setToggleOpen={setToggleOpen} />
                 <MenuToggle onClick={handleToggle} />
             </nav>
 
