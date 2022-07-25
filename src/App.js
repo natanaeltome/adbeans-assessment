@@ -6,13 +6,13 @@ import About from './pages/About';
 
 const App = () => {
 
-  const collection = useFetchCollection();
+  const { collection, error } = useFetchCollection();
 
   return (
     <>
       <Menu />
       <Routes>
-        <Route path='/' element={<List rowData={collection} />} />
+        <Route path='/' element={<List rowData={collection} error={error} />} />
         <Route path='/about' element={<About />} />
       </Routes>
     </>

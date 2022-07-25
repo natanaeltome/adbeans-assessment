@@ -4,6 +4,8 @@ import apiServices from '../services/boardgameatlas';
 export const useFetchCollection = () => {
 
     const [collection, setCollection] = useState(null);
+    const [error, setError] = useState(null);
+
     const tableModel = (boardgame) => {
         return {
             name: boardgame.name,
@@ -15,12 +17,18 @@ export const useFetchCollection = () => {
     };
 
     useEffect(() => {
-        apiServices.getAll()
-            .then(bgCollection => {
+        const fetchData = async () => {
+            try {
+                const bgCollection = await apiServices.getAll();
                 setCollection(bgCollection.map(boardgame => tableModel(boardgame)));
-            });
+            }
+            catch (err) {
+                setError(err);
+            }
+        };
+        fetchData();
     }, []);
 
-    return collection;
+    return { collection, error };
 };
 
