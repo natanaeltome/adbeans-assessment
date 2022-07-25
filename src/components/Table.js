@@ -33,7 +33,11 @@ const Table = ({ rowData }) => {
                 columnDefs={columnDefs}
                 animateRows={true}
                 defaultColDef={defaultColDef}
-                onFirstDataRendered={params => params.api.sizeColumnsToFit()}
+                onFirstDataRendered={params => {
+                    const windowsWidth = windowSize.innerWidth;
+                    if (windowsWidth > 880) params.api.sizeColumnsToFit();
+                }
+                }
                 onGridSizeChanged={params => onGridSizeChanged(params.api, windowSize)}
             />
         </div>
