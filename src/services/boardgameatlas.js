@@ -3,7 +3,7 @@ const URL = `https://api.boardgameatlas.com/api/search?list_id=mGkyiPhujf&client
 
 const getAll = async () => {
     const response = await axios.get(URL);
-    return response.data.games;
+    return response.data;
 };
 
 export default { getAll };

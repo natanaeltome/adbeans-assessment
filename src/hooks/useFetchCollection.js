@@ -20,7 +20,7 @@ export const useFetchCollection = () => {
         const fetchData = async () => {
             try {
                 const bgCollection = await apiServices.getAll();
-                setCollection(bgCollection.map(boardgame => tableModel(boardgame)));
+                setCollection(bgCollection.games.map(boardgame => tableModel(boardgame)));
             }
             catch (err) {
                 setError(err);
