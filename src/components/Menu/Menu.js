@@ -19,6 +19,7 @@ const Menu = () => {
                 <MenuLinks toggleOpen={toggleOpen} />
                 <MenuToggle onClick={handleToggle} />
             </nav>
+
         </header>
     );
 };
