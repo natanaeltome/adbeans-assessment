@@ -3,7 +3,7 @@ import apiServices from '../services/boardgameatlas';
 
 export const useFetchCollection = () => {
 
-    const [collection, setCollection] = useState([]);
+    const [collection, setCollection] = useState(null);
     const tableModel = (boardgame) => {
         return {
             name: boardgame.name,
