@@ -1,4 +1,4 @@
-# adbeans-assessment
+# BoardgameAtlas Collection Finder
 
 BoardGameAtlas Collection Finder is a simple Single Page Application (SPA) that fetches data from the [BoardGameAtlas API](https://www.boardgameatlas.com/api/docs) to display a user collection. It was originally created as a takehome assessment.
 
